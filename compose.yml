@@ -1,6 +1,7 @@
 volumes:
   db-store:
   psysh-store:
+  app-root:
 
 configs:
   db-config:
@@ -21,6 +22,9 @@ services:
         target: /root/.config/psysh
         volume:
           nocopy: true
+      - type: volume
+        source: app-root
+        target: /root/
     environment:
       - APP_DEBUG=${APP_DEBUG:-true}
       - APP_ENV=${APP_ENV:-local}
