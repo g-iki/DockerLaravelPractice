@@ -18,6 +18,7 @@ RUN apt-get update \
   && apt-get -y install --no-install-recommends \
     locales \
     git \
+    openssh-server \
     unzip \
     libzip-dev \
     libicu-dev \
